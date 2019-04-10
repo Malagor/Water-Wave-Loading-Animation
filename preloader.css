@@ -60,8 +60,8 @@ body {
   height: 200%;
   top: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, -75%);
-          transform: translate(-50%, -75%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .preloader .loader::before {
@@ -74,29 +74,41 @@ body {
 .preloader .loader::after {
   border-radius: 40%;
   background: rgba(0, 0, 0, 0.5);
-  -webkit-animation: animate-loader 10s linear infinite;
-          animation: animate-loader 10s linear infinite;
+  -webkit-animation: animate-loader 5s linear infinite;
+          animation: animate-loader 5s linear infinite;
 }
 
 @-webkit-keyframes animate-loader {
   0% {
-    -webkit-transform: translate(-50%, -75%) rotate(0deg);
-            transform: translate(-50%, -75%) rotate(0deg);
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
   }
   100% {
-    -webkit-transform: translate(-50%, -75%) rotate(360deg);
-            transform: translate(-50%, -75%) rotate(360deg);
+    -webkit-transform: translate(-50%, -105%) rotate(360deg);
+            transform: translate(-50%, -105%) rotate(360deg);
   }
 }
 
 @keyframes animate-loader {
   0% {
-    -webkit-transform: translate(-50%, -75%) rotate(0deg);
-            transform: translate(-50%, -75%) rotate(0deg);
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
   }
   100% {
-    -webkit-transform: translate(-50%, -75%) rotate(360deg);
-            transform: translate(-50%, -75%) rotate(360deg);
+    -webkit-transform: translate(-50%, -105%) rotate(360deg);
+            transform: translate(-50%, -105%) rotate(360deg);
   }
 }
-/*# sourceMappingURL=style.css.map */
+
+.preloader .percent {
+  color: #4973ff;
+  z-index: 1000;
+  background: #fff;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+}
+/*# sourceMappingURL=preloader.css.map */
